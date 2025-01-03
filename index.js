@@ -281,6 +281,4 @@ app.get('/sum', (req, resp) => {
   let num2 = parseFloat(req.query.num2);
   resp.send(calSum(num1, num2));
 });
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-})
+
