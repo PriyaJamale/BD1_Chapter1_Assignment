@@ -5,7 +5,7 @@
     { "src": "assignment.js", "use": "@vercel/node" }
   ],
   "rewrites": [
-    { "source": "/{.*}", "destination": "index.js" },
-    { "source": "/{.*}", "destination": "assignment.js" }
+    { "source": "/(.*)", "destination": "index.js" },
+    { "source": "/(.*)", "destination": "assignment.js" }
   ]
 }
