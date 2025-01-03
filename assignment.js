@@ -1,7 +1,6 @@
-var express = require('express');
-var cors = require('cors');
-var app = express();
-const port = 3000;
+let express = require('express');
+let cors = require('cors');
+let app = express();
 app.use(cors());
 
 let taxRate = 5;
@@ -14,10 +13,6 @@ app.get('/cart-total', (req, resp) => {
   const cartTotal = parseFloat(req.query.cartTotal);
   const totalCartValue = newItemPrice + cartTotal;
   resp.send(totalCartValue.toString());
-});
-
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
 });
 
 function discount(cartTotal, isMember) {
